@@ -1,0 +1,18 @@
+SELECT * from SS_exceltodb2  ;
+update SS_exceltodb2 set department_id=10  where department_head='Thanvi';
+select case when department_id=10 then 'hr'
+else 'others'  end as dname, department_id from SS_exceltodb2 ;
+select replace(replace(department_head,'n','a'),'i','a') from SS_exceltodb2 ;
+create table SS_account
+(
+accno varchar(100),
+name varchar(100),
+bank varchar(100)
+);
+insert into SS_account values('467@46849$74849%','shivu','canara'),('4739%72893&6734','harvi','BOB'),('57849&838@747$','nikil','Axis');
+Select * from SS_account ;
+select replace(replace(replace(replace(accno,'@','-'),'$','-'),'%','-'),'&','-') from SS_account;
+Alter table SS_account ADD email varchar(100);
+Insert into SS_account (email) values('jduwikw@gmail.com'),('hdyuwnans@gmail.com'),('jrnfksowno@gmail.com');
+Select substring(email,charindex('@',email),len(email)) from SS_account as domains; 
+Select * from SS_account ;
